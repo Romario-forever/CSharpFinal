@@ -19,6 +19,18 @@ void Zadacha()
     foreach (var arr in attempt)
         Console.WriteLine(arr);
 
+    string[] decision = new string[attempt.Length];
+    int startSize = 0;
+    Console.WriteLine($"Новый массив: ");
+    foreach (var newArr in attempt)
+    {
+        if (newArr.Length <= 3)
+        {
+            decision[startSize] = newArr;
+            startSize++;
+        }
+    }
+    Console.WriteLine(string.Join(Environment.NewLine, decision, 0, startSize));
    }
 Zadacha();
 
